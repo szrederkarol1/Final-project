@@ -1,0 +1,34 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills_section {
+  @include flex;
+  background-color: rgb(153, 0, 255);
+  height: 100%;
+  .skills_container {
+    @include flex;
+    flex-direction: column;
+    .tittle_skills {
+      margin-bottom: 2em;
+    }
+    .first_skill {
+      height: 350px;
+      width: 110%;
+      background: linear-gradient(
+        140deg,
+        rgba(212, 204, 204, 1) 26%,
+        rgba(255, 255, 255, 1) 91%
+      );
+      border-radius: 5%;
+      @include flex;
+      flex-direction: column;
+
+      .tittle_first_skill {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

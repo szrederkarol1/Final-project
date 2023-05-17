@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Navigation from "./first_view/Navigation.jsx";
-import "./Navigation.scss"
+import Skills from "./skills_view/skills.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
     <Navigation />
+    <Skills />
   </React.StrictMode>
 );
