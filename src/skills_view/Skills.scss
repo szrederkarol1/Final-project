@@ -6,28 +6,46 @@
 
 .skills_section {
   @include flex;
-  background-color: rgb(153, 0, 255);
+  background-color: rgb(212, 203, 218);
   height: 100%;
   .skills_container {
     @include flex;
     flex-direction: column;
     .tittle_skills {
       margin-bottom: 2em;
+      color: rgb(153, 18, 146);
     }
     .first_skill {
       height: 350px;
-      width: 110%;
+      width: 40%;
       background: linear-gradient(
         140deg,
-        rgba(212, 204, 204, 1) 26%,
-        rgba(255, 255, 255, 1) 91%
+        rgb(153, 18, 146) 26%,
+        rgba(255, 255, 255, 0.726) 99%
       );
       border-radius: 5%;
       @include flex;
-      flex-direction: column;
-
-      .tittle_first_skill {
-        margin-bottom: 2rem;
+      .icon_and_title_first_skill {
+        @include flex;
+        .tittle_first_skill {
+          margin-left: 1.5em;
+          color: #fff;
+          font-weight: 300;
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+      }
+      .paragraph_first_skill {
+        margin-bottom: 4em;
+        color: #fff;
+        line-height: 1.7em;
+      }
+      .mały_div {
+        width: 75%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
       }
     }
   }
