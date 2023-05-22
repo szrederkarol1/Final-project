@@ -10,7 +10,7 @@ function Skills() {
           <div className="first_skill">
             <div className="mały_div">
               <div className="icon_and_title_first_skill">
-                <span style={{color: "yellow", fontWeight: "100"}}>
+                <span style={{ color: "yellow", fontWeight: "100" }}>
                   <i className="fa-solid fa-laptop-code fa-4x fa-flip"></i>
                 </span>
                 <h3 className="tittle_first_skill">
@@ -21,6 +21,20 @@ function Skills() {
                 I have fluent knowledge of HTML, CSS and good knowledge of
                 JavaScript. I have knowledge about the React framework.
               </p>
+            </div>
+          </div>
+        </div>
+        <div className="my_arguments">
+          <div className="container_arguments">
+            <div className="first_row_arguments">
+              <div className="item_arguments">karol</div>
+              <div className="item_arguments">karol</div>
+              <div className="item_arguments">karol</div>
+            </div>
+            <div className="secondary_row_arguments">
+              <div className="item_arguments">karol</div>
+              <div className="item_arguments">karol</div>
+              <div className="item_arguments">karol</div>
             </div>
           </div>
         </div>

@@ -1,7 +1,9 @@
 body {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 247, 247);
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #4c514f;
+  background-image: url("./assets/ZenBG-1.png"), url("./assets/ZenBG-2.png");
+  background-repeat: repeat-x, repeat;
 }

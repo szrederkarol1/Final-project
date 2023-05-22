@@ -4,10 +4,14 @@
   align-items: center;
 }
 
+$primary_margin : 1em;
+
+
 .skills_section {
   @include flex;
   background-color: rgb(212, 203, 218);
-  height: 100%;
+  height: auto;
+  flex-direction: column;
   .skills_container {
     @include flex;
     flex-direction: column;
@@ -21,17 +25,18 @@
       background: linear-gradient(
         140deg,
         rgb(153, 18, 146) 26%,
-        rgba(255, 255, 255, 0.726) 99%
+        rgba(0, 0, 0, 0.726) 99%
       );
       border-radius: 5%;
       @include flex;
       .icon_and_title_first_skill {
         @include flex;
         .tittle_first_skill {
-          margin-left: 1.5em;
+          margin-left: $primary_margin;
           color: #fff;
           font-weight: 300;
-          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
         }
       }
       .paragraph_first_skill {
@@ -46,6 +51,53 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+      }
+    }
+  }
+  .my_arguments {
+    @include flex;
+    height: 35em;
+    width: 80%;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    background: linear-gradient(
+      140deg,
+      rgb(153, 18, 146) 26%,
+      rgba(0, 0, 0, 0.726) 99%
+    );
+    .container_arguments {
+      @include flex;
+      flex-direction: column;
+      height: 80%;
+      width: 80%;
+      background-color: rgba(0, 0, 0, 0);
+      .first_row_arguments {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: $primary_margin;
+        .item_arguments {
+          @include flex;
+          width: 100px;
+          height: 100px;
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 1px solid beige;
+          border-radius: 5px;
+          margin: $primary_margin;
+        }
+      }
+      .secondary_row_arguments {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .item_arguments {
+          @include flex;
+          width: 100px;
+          height: 100px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border: 1px solid beige;
+          margin: $primary_margin;
+        }
       }
     }
   }
