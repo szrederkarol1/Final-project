@@ -3,9 +3,17 @@
   justify-content: center;
   align-items: center;
 }
+@mixin skill {
+  @include flex;
+  width: 15em;
+  height: 7em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid beige;
+  border-radius: 10px;
+  margin: $primary_margin;
+}
 
-$primary_margin : 1em;
-
+$primary_margin: 1em;
 
 .skills_section {
   @include flex;
@@ -73,31 +81,22 @@ $primary_margin : 1em;
       background-color: rgba(0, 0, 0, 0);
       .first_row_arguments {
         display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin: $primary_margin;
         .item_arguments {
-          @include flex;
-          width: 100px;
-          height: 100px;
-          background-color: rgba(255, 255, 255, 0.1);
-          border: 1px solid beige;
-          border-radius: 5px;
-          margin: $primary_margin;
+          @include skill;
         }
       }
-      .secondary_row_arguments {
+      .secondary_row_container {
         display: flex;
-        align-items: center;
-        justify-content: space-around;
+        margin: auto;
         .item_arguments {
-          @include flex;
-          width: 100px;
-          height: 100px;
-          background-color: rgba(255, 255, 255, 0.2);
-          border: 1px solid beige;
-          margin: $primary_margin;
+          @include skill;
         }
+      }
+    }
+    .thirty_row_arguments {
+      display: flex;
+      .item_arguments {
+        @include skill;
       }
     }
   }
