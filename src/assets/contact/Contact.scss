@@ -1,0 +1,44 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_section {
+  width: 100%;
+  height: 20em;
+  background-color: rgb(37, 35, 35);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 15px;
+  border-radius: 15px 15px;
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  input {
+    box-shadow: 4px 4px 2px #ccc;
+    border: 1px solid;
+    padding: 5px;
+  }
+  .button_links {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 123, 0, 0.637);
+    @include flex;
+  }
+  .form_container {
+    height: 90%;
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.253);
+  }
+  .contact_details {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(128, 0, 255);
+  }
+}

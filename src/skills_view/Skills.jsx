@@ -26,7 +26,8 @@ function Skills() {
         </div>
         <div className="my_arguments">
           <div className="container_arguments">
-            <div className="first_row_arguments">
+          <h3 style={{color: "#ffff", fontFamily: "cursive", fontSize: "2em"}}>MY ARGUMENTS</h3>
+            <div className="first_row_arguments ">
               <div className="item_arguments">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
