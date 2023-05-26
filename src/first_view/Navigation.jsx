@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navigation.scss";
 
-function Navigation() {
+const Navigation = () => {
   return (
     <>
       <div className="top_bar">
@@ -36,5 +36,5 @@ function Navigation() {
       </div>
     </>
   );
-}
+};
 export default Navigation;

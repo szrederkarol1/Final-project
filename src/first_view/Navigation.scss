@@ -92,11 +92,15 @@ $another-weight: 300;
   .welcome_site {
     text-align: center;
     .btn_first_page {
-      height: 3em;
-      width: 15em;
-      border-radius: 15%;
-      font-weight: $secondary-weight;
-      margin-top: 4em;
+      border: 1px solid #556699;
+      border-radius: 100px;
+      box-shadow: 2px 2px #444444;
+      padding: 15px 35px;
+      color: #ffffff;
+      font: normal bold 24px/1 "Ubuntu", sans-serif;
+      text-align: center;
+      text-shadow: 2px 2px #000000;
+      margin-top: 2em;
       cursor: pointer;
     }
   }
