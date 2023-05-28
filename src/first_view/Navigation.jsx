@@ -13,16 +13,16 @@ const Navigation = () => {
             <a href="About me">ABOUT ME</a>
           </li>
           <li>
-            <a href="Skills">SKILLS</a>
+            <a href="#skills">SKILLS</a>
           </li>
           <li>
             <a href="Projects">PROJECTS</a>
           </li>
           <li>
-            <a href="Location">LOCATION</a>
+            <a href="#location">LOCATION</a>
           </li>
           <li>
-            <a href="Contact">CONTACT</a>
+            <a href="#contact">CONTACT</a>
           </li>
         </nav>
       </div>

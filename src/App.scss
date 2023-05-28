@@ -4,4 +4,9 @@ body {
   display: flex;
   justify-content: center;
   background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }

@@ -4,6 +4,7 @@ import "./Skills.scss";
 function Skills() {
   return (
     <>
+       <a name="skills"></a>
       <section className="skills_section">
         <div className="skills_container">
           <h2 className="tittle_skills">HOW I CAN SERVE YOU</h2>
@@ -26,10 +27,19 @@ function Skills() {
         </div>
         <div className="my_arguments">
           <div className="container_arguments">
-          <h3 style={{color: "#ffff", fontFamily: "cursive", fontSize: "2em"}}>MY ARGUMENTS</h3>
+            <h3
+              style={{
+                color: "orange",
+                fontFamily: "cursive",
+                fontSize: "2em",
+              }}
+            >
+              MY ARGUMENTS
+            </h3>
             <div className="first_row_arguments ">
               <div className="item_arguments">
                 <svg
+                  style={{ borderRadius: "100px" }}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="-150 0 700 512"
                 >

@@ -4,6 +4,7 @@ import "./Contact.scss";
 const Contact = () => {
   return (
     <>
+      <a name="contact"></a>
       <div className="contact_section">
         <h2 className="tittle_contact">
           DROP<h2 className="tittle_red">ME</h2> A LINE
@@ -98,6 +99,6 @@ const Contact = () => {
       </div>
     </>
   );
-}
+};
 
 export default Contact;
