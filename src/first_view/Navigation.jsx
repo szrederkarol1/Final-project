@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navigation.scss";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -16,7 +17,7 @@ const Navigation = () => {
             <a href="#skills">SKILLS</a>
           </li>
           <li>
-            <a href="Projects">PROJECTS</a>
+            <Link to="/Projects">PROJECTS</Link>
           </li>
           <li>
             <a href="#location">LOCATION</a>

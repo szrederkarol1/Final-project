@@ -6,9 +6,9 @@ const Contact = () => {
     <>
       <a name="contact"></a>
       <div className="contact_section">
-        <h2 className="tittle_contact">
-          DROP<h2 className="tittle_red">ME</h2> A LINE
-        </h2>
+        <div className="tittle_contact">
+          DROP<h3 className="tittle_red">ME</h3> A LINE
+        </div>
         <div
           className="dots"
           style={{
@@ -19,12 +19,12 @@ const Contact = () => {
           }}
         >
           <i
-            class="fa-solid fa-ellipsis-vertical fa-rotate-90 fa-2x"
+            className="fa-solid fa-ellipsis-vertical fa-rotate-90 fa-2x"
             style={{ marginRight: "30px" }}
           ></i>
-          <i class="fa-solid fa-arrow-down fa-fade fa-3x"></i>
+          <i className="fa-solid fa-arrow-down fa-fade fa-3x"></i>
           <i
-            class="fa-solid fa-ellipsis-vertical fa-rotate-90 fa-2x"
+            className="fa-solid fa-ellipsis-vertical fa-rotate-90 fa-2x"
             style={{ marginLeft: "30px" }}
           ></i>
         </div>
