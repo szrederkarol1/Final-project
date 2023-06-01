@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import supabase from "../services/supabase";
+import "./SignUp.scss";
 
 const SignUp = () => {
   const navigation = useNavigate();
@@ -18,7 +19,7 @@ const SignUp = () => {
     });
 
     if (!error) {
-      navigation("/");
+      navigation("/Projects/SignIn");
       return;
     }
     console.error(error);
@@ -26,17 +27,26 @@ const SignUp = () => {
 
   return (
     <>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSignUp}>
-        <input id="email" placeholder="Enter Your email" />
-        <input id="password" type="password" placeholder="Enter the password" />
-        <input
-          id="password_confirm"
-          type="password"
-          placeholder="Confirm password"
-        />
-        <button>Register</button>
-      </form>
+      <div className="register_container">
+        <div className="form_container">
+          <h1>Sign Up</h1>
+          <form className="form" onSubmit={handleSignUp}>
+            <input id="email" placeholder="Your email" />
+            <input
+              id="password"
+              type="password"
+              placeholder="password"
+            />
+            <input
+              id="password_confirm"
+              type="password"
+              placeholder="Repeat Your password"
+            />
+            <button>Register</button>
+          </form>
+          <Link to="/Projects/SignIn">Log In</Link>
+        </div>
+      </div>
     </>
   );
 };

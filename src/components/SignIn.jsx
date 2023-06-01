@@ -1,5 +1,5 @@
 import supabase from "../services/supabase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 
 const SignIn = () => {
@@ -14,7 +14,7 @@ const SignIn = () => {
       password: password.value,
     });
     if (!error) {
-      navigation("/");
+      navigation("/Projects/NoteBook");
       return;
     }
     setauthError(error.message);
@@ -28,6 +28,7 @@ const SignIn = () => {
         <input id="password" type="password" placeholder="Enter the password" />
         <button>Log in</button>
       </form>
+      <Link to="/Projects/SignUp">Sign Up</Link>
     </>
   );
 };
