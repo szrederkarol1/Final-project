@@ -1,12 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import supabase from "../services/supabase";
 import { useEffect, useState } from "react";
+import "./notebook.scss";
 
 function NoteBook() {
   const navigation = useNavigate();
-  const [flag, setFlag] = useState(false);
   let alreadyMounted = false;
 
+  const [session, setSession] = useState(null);
+  const [entries, setEntries] = useState(null);
   useEffect(() => {
     if (!alreadyMounted) {
       getSession();
@@ -14,11 +16,29 @@ function NoteBook() {
     alreadyMounted = true;
   }, []);
 
+  useEffect(() => {
+    if (session) {
+      getEntries();
+    }
+  }, [session]);
+
   const getSession = async () => {
     const { data, error } = await supabase.auth.getSession();
-    console.log(data);
+
     if (!data.session) {
       navigation("/Projects/SignIn");
+      return;
+    }
+    setSession(data);
+  };
+
+  const getEntries = async () => {
+    let { data, error } = await supabase
+      .from("Notebook")
+      .select("*")
+      .eq("author", session.session.user.email);
+    if (!error) {
+      setEntries(data);
     }
   };
 
@@ -34,23 +54,34 @@ function NoteBook() {
 
     const { text } = e.target.elements;
 
-    let { data: Notebook, error } = await supabase
+    const { data, error } = await supabase
       .from("Notebook")
-      .select("id");
-    if (error) {
-      console.log(data);
+      .insert([{ entry: text.value, author: session.session.user.email }])
+      .select("*");
+    if (!error) {
+      setEntries((prev) => [...prev, data[0]]);
     }
   };
 
-  
   return (
-    <div>
-      <button onClick={handleLogout}>Log out</button>
-      <form onSubmit={handleSaveNote}>
-        <input id="text" type="text" placeholder="Wpisz notatkę.." />
-        <button>Zapisz</button>
-      </form>
-      <h1>Hello! This is my NoteBook!</h1>
+    <div className="notebook">
+      <div className="notebook_header">Notebook</div>
+      <div className="notebook_content">
+        <form onSubmit={handleSaveNote}>
+          <textarea id="text" placeholder="Wpisz notatkę.."></textarea>
+          <button>Zapisz</button>
+        </form>
+        {entries && (
+          <ul>
+            {entries.map(({ entry, id }) => (
+              <li style={{ listStyleType: "none" }} key={id}>
+                {entry}
+              </li>
+            ))}
+          </ul>
+        )}
+        <button onClick={handleLogout}>Log out</button>
+      </div>
     </div>
   );
 }

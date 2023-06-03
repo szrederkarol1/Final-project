@@ -4,6 +4,7 @@ import "./SignUp.scss";
 
 const SignUp = () => {
   const navigation = useNavigate();
+
   const handleSignUp = async (e) => {
     e.preventDefault();
     const { email, password, password_confirm } = e.target.elements;
@@ -27,24 +28,35 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="register_container">
+      <div className="register_section">
         <div className="form_container">
-          <h1>Sign Up</h1>
-          <form className="form" onSubmit={handleSignUp}>
-            <input id="email" placeholder="Your email" />
-            <input
-              id="password"
-              type="password"
-              placeholder="password"
-            />
-            <input
-              id="password_confirm"
-              type="password"
-              placeholder="Repeat Your password"
-            />
-            <button>Register</button>
-          </form>
-          <Link to="/Projects/SignIn">Log In</Link>
+          <div className="form_content">
+            <h1 className="heading_form">Sign Up</h1>
+            <form className="form" onSubmit={handleSignUp}>
+              <input id="email" placeholder="Your email" />
+              <input id="password" type="password" placeholder="Password" />
+              <input
+                id="password_confirm"
+                type="password"
+                placeholder="Repeat Your password"
+              />
+              <button className="btn_register">Sign Up</button>
+            </form>
+            <u>
+              <h4 style={{ marginBottom: "1em" }}>Do you have an account?</h4>
+            </u>
+            <Link
+              to="/Projects/SignIn"
+              style={{
+                textDecoration: "none",
+                color: "rgba(45, 89, 233)",
+                width: "3em",
+              }}
+            >
+              Sign In
+            </Link>
+          </div>
+          <div className="image"></div>
         </div>
       </div>
     </>
