@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import supabase from "../services/supabase";
+import supabase from "../../services/supabase";
 import { useEffect, useState } from "react";
 import "./notebook.scss";
 
@@ -62,6 +62,16 @@ function NoteBook() {
       setEntries((prev) => [...prev, data[0]]);
     }
   };
+  async function handleRemove(id) {
+    const newList = entries.filter((li) => li.id !== id);
+    const { data, error } = await supabase
+      .from("Notebook")
+      .delete()
+      .eq("id", id);
+    if (!error) {
+      setEntries(newList);
+    }
+  }
 
   return (
     <div className="notebook">
@@ -76,6 +86,14 @@ function NoteBook() {
             {entries.map(({ entry, id }) => (
               <li style={{ listStyleType: "none" }} key={id}>
                 {entry}
+                <button
+                  className="delete"
+                  type="button"
+                  onClick={() => handleRemove(id)}
+                >
+                  Delete
+                </button>
+                <div className="middle_line"></div>
               </li>
             ))}
           </ul>
