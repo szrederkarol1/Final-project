@@ -5,6 +5,7 @@ import "./SignUp.scss";
 const SignUp = () => {
   const navigation = useNavigate();
 
+  
   const handleSignUp = async (e) => {
     e.preventDefault();
     const { email, password, password_confirm } = e.target.elements;

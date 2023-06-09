@@ -8,7 +8,18 @@ function NoteBook() {
   let alreadyMounted = false;
 
   const [session, setSession] = useState(null);
+
   const [entries, setEntries] = useState(null);
+
+  const getSession = async () => {
+    const { data } = await supabase.auth.getSession();
+
+    if (!data.session) {
+      navigation("/Projects/SignIn");
+      return;
+    }
+    setSession(data);
+  };
   useEffect(() => {
     if (!alreadyMounted) {
       getSession();
@@ -21,16 +32,6 @@ function NoteBook() {
       getEntries();
     }
   }, [session]);
-
-  const getSession = async () => {
-    const { data, error } = await supabase.auth.getSession();
-
-    if (!data.session) {
-      navigation("/Projects/SignIn");
-      return;
-    }
-    setSession(data);
-  };
 
   const getEntries = async () => {
     let { data, error } = await supabase
@@ -51,9 +52,7 @@ function NoteBook() {
   };
   const handleSaveNote = async (e) => {
     e.preventDefault();
-
     const { text } = e.target.elements;
-
     const { data, error } = await supabase
       .from("Notebook")
       .insert([{ entry: text.value, author: session.session.user.email }])
@@ -62,6 +61,7 @@ function NoteBook() {
       setEntries((prev) => [...prev, data[0]]);
     }
   };
+
   async function handleRemove(id) {
     const newList = entries.filter((li) => li.id !== id);
     const { data, error } = await supabase

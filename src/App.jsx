@@ -2,8 +2,8 @@ import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Base from "./components/Base";
 import Projects from "./components//projects/Projects";
-import SignUp from "./components/SignUp";
-import SignIn from "./components/SignIn";
+import SignUp from "./components/log_reg/SignUp";
+import SignIn from "./components/log_reg/SignIn";
 import NoteBook from "./components//notebook_project/notebook";
 
 const App = () => {
