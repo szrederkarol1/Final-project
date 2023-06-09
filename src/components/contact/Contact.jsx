@@ -6,7 +6,7 @@ const Contact = () => {
     <>
       <a name="contact"></a>
       <div className="contact_section">
-        <div className="tittle_contact" style={{fontSize:"24px"}}>
+        <div className="tittle_contact" style={{ fontSize: "24px" }}>
           DROP<h3 className="tittle_red">ME</h3> A LINE
         </div>
         <div
@@ -64,9 +64,13 @@ const Contact = () => {
       <div className="form_section">
         <div className="button_links">Click me!</div>
         <div className="form_container">
-          <form action="https://formsubmit.io/send/karolszreder1@gmail.com" method="POST" className="left-form">
-            {/* <label for="name">First name</label>
-            <input type="text" placeholder="Your name"></input> */}
+          <form
+            action="https://formsubmit.io/send/karolszreder1@gmail.com"
+            method="POST"
+            className="left-form"
+          >
+            <label for="name">First name</label>
+            <input type="text" placeholder="Your name"></input>
             <label for="email">Email</label>
             <input type="text" placeholder="Your email"></input>
             {/* <label for="number">Number</label>
