@@ -65,12 +65,12 @@ const Contact = () => {
         <div className="button_links">Click me!</div>
         <div className="form_container">
           <form action="https://formsubmit.io/send/karolszreder1@gmail.com" method="POST" className="left-form">
-            <label for="name">First name</label>
-            <input type="text" placeholder="Your name"></input>
+            {/* <label for="name">First name</label>
+            <input type="text" placeholder="Your name"></input> */}
             <label for="email">Email</label>
             <input type="text" placeholder="Your email"></input>
-            <label for="number">Number</label>
-            <input type="number" placeholder="Your number"></input>
+            {/* <label for="number">Number</label>
+            <input type="number" placeholder="Your number"></input> */}
             <label for="message">Message</label>
             <textarea
               rows="10"

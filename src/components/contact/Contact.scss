@@ -81,11 +81,12 @@
     @include flex;
   }
   .form_container {
+    color: #ccc;
     display: flex;
     justify-content: space-around;
     height: 90%;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.253);
+    background-color:  rgb(37, 35, 35);
     .left-form {
       height: 100%;
       display: flex;

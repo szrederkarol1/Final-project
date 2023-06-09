@@ -5,14 +5,14 @@ import "./SignUp.scss";
 const SignUp = () => {
   const navigation = useNavigate();
 
-  
+  //wysłanie formularza rejestracji
   const handleSignUp = async (e) => {
     e.preventDefault();
     const { email, password, password_confirm } = e.target.elements;
-
-    if (password.value !== password_confirm.value) {
+    if (!email.value.includes("@")) {
+      alert("Email must have @");
+    } else if (password.value !== password_confirm.value) {
       alert("Both passwords are different.");
-      return;
     }
 
     let { error } = await supabase.auth.signUp({

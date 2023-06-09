@@ -5,15 +5,15 @@ import "./notebook.scss";
 
 function NoteBook() {
   const navigation = useNavigate();
-  let alreadyMounted = false;
-
-  const [session, setSession] = useState(null);
-
   const [entries, setEntries] = useState(null);
+
+  //sprawdzenie, czy użytkownik jest zalogowany
+  //funkcja async jest odpowiedzialna za pobieranie danych z Supabase
+  let alreadyMounted = false;
+  const [session, setSession] = useState(null);
 
   const getSession = async () => {
     const { data } = await supabase.auth.getSession();
-
     if (!data.session) {
       navigation("/Projects/SignIn");
       return;
@@ -27,12 +27,7 @@ function NoteBook() {
     alreadyMounted = true;
   }, []);
 
-  useEffect(() => {
-    if (session) {
-      getEntries();
-    }
-  }, [session]);
-
+  //pobieranie wpisów z bazy danych Supabase, które są powiązane z zalogowanym użytkownikiem
   const getEntries = async () => {
     let { data, error } = await supabase
       .from("Notebook")
@@ -42,7 +37,13 @@ function NoteBook() {
       setEntries(data);
     }
   };
+  useEffect(() => {
+    if (session) {
+      getEntries();
+    }
+  }, [session]);
 
+  //wylogowanie użytkownika przy użyciu Supabase
   const handleLogout = async () => {
     let { error } = await supabase.auth.signOut();
     if (!error) {
@@ -50,6 +51,8 @@ function NoteBook() {
     }
     navigation("/Projects/SignIn");
   };
+
+  //zapisywanie nowej notatki w Supabase
   const handleSaveNote = async (e) => {
     e.preventDefault();
     const { text } = e.target.elements;
@@ -62,6 +65,7 @@ function NoteBook() {
     }
   };
 
+  //usuwanie wpisu z Supabase na podstawie przekazanego identyfikatora
   async function handleRemove(id) {
     const newList = entries.filter((li) => li.id !== id);
     const { data, error } = await supabase
