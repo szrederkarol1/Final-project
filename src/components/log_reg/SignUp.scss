@@ -16,6 +16,7 @@
   justify-content: center;
   background-color: rgba(51, 50, 44, 0.137);
   animation: fade-in 0.8s ease-out;
+
   .form_container {
     width: 60%;
     height: 55%;
@@ -25,6 +26,9 @@
     box-shadow: 7px 0px 39px -23px rgba(66, 68, 90, 1);
     border-radius: 20px;
     background-color: #fff;
+    @media screen and (max-width: 1350px) {
+      justify-content: center;
+    }
     .form_content {
       display: flex;
       flex-direction: column;
@@ -73,5 +77,9 @@
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 1350px) {
+      background-image: none;
+      width: 0%;
+    }
   }
 }

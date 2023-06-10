@@ -29,7 +29,7 @@ const Navigation = () => {
       </div>
       <div className="header_container">
         <div className="welcome_site">
-          <h1>HEY, MY NAME IS KAROL SZREDER</h1>
+          <h1 className="welcome_title">HEY, MY NAME IS KAROL SZREDER</h1>
           <button type="submit" className="btn_first_page">
             PROJECTS
           </button>

@@ -26,6 +26,9 @@
     border-radius: 20px;
     flex-direction: row-reverse;
     background-color: #fff;
+    @media screen and (max-width: 1350px) {
+      justify-content: center;
+    }
     .form_content {
       display: flex;
       flex-direction: column;
@@ -74,5 +77,9 @@
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 1350px) {
+      background-image: none;
+      width: 0%;
+    }
   }
 }

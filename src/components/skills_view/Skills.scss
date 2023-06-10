@@ -25,6 +25,7 @@ $primary_margin: 1em;
     flex-direction: column;
     .tittle_skills {
       margin-bottom: 2em;
+      margin-top: 2em;
       color: rgb(153, 18, 146);
     }
     .first_skill {
@@ -35,6 +36,7 @@ $primary_margin: 1em;
         rgb(153, 18, 146) 26%,
         rgba(0, 0, 0, 0.726) 99%
       );
+      box-shadow: 20px 5px 100px 23px rgba(153, 18, 146, 1);
       border-radius: 5%;
       @include flex;
       .icon_and_title_first_skill {
@@ -63,6 +65,7 @@ $primary_margin: 1em;
     }
   }
   .my_arguments {
+    box-shadow: 20px 5px 100px 23px rgba(153, 18, 146, 1);
     @include flex;
     height: 35em;
     width: 80%;
@@ -73,6 +76,10 @@ $primary_margin: 1em;
       rgb(153, 18, 146) 26%,
       rgba(0, 0, 0, 0.726) 99%
     );
+    @media screen and (max-width: 1000px) {
+      height: auto;
+    }
+
     .container_arguments {
       @include flex;
       flex-direction: column;
@@ -81,6 +88,9 @@ $primary_margin: 1em;
       background-color: rgba(0, 0, 0, 0);
       .first_row_arguments {
         display: flex;
+        @media screen and (max-width: 1000px) {
+          display: block;
+        }
         .item_arguments {
           @include skill;
         }
@@ -95,6 +105,9 @@ $primary_margin: 1em;
     }
     .thirty_row_arguments {
       display: flex;
+      @media screen and (max-width: 1000px) {
+        display: block;
+      }
       .item_arguments {
         @include skill;
       }

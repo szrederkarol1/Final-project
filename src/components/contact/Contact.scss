@@ -10,6 +10,11 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  @media screen and (max-width: 900px) {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
   .tittle_contact {
     display: flex;
     justify-content: center;
@@ -26,6 +31,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media screen and (max-width: 900px) {
+      display: block;
+    }
     .data {
       height: 18em;
       width: 30em;
@@ -33,6 +41,9 @@
       @include flex;
       flex-direction: column;
       border-bottom: 3px solid red;
+      @media screen and (max-width: 1000px) {
+        margin: 2em;
+      }
       &:hover {
         border-bottom: 3px solid yellow;
         transition: all 500ms ease-in-out;
@@ -86,7 +97,7 @@
     justify-content: space-around;
     height: 90%;
     width: 50%;
-    background-color:  rgb(37, 35, 35);
+    background-color: rgb(37, 35, 35);
     .left-form {
       height: 100%;
       display: flex;
