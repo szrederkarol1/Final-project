@@ -11,5 +11,5 @@ html,
 body {
   scroll-behavior: smooth;
 }
-@import "./components/give_items_project/src/scss/settings/colors";
-@import "./components/give_items_project/src/scss/settings/fonts";
+@import "./components/give_items_project/src/scss/settings/_colors.scss";
+@import "./components/give_items_project/src/scss/settings/_fonts.scss";
