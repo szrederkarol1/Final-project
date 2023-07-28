@@ -7,6 +7,9 @@ body {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
+@import "./components/give_items_project/src/scss/settings/colors";
+@import "./components/give_items_project/src/scss/settings/fonts";

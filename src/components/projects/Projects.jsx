@@ -24,6 +24,30 @@ function Projects() {
             <span className="line"></span>
           </Link>
         </div>
+        <div className="give_items_content">
+          <Link
+            to="/Projects/GiveItems"
+            className="giveItems"
+            style={{
+              textDecoration: "none",
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
+            <span className="line"></span>
+            <span className="tittle_donate" style={{ marginBottom: "1em" }}>
+              Donate Goods
+            </span>
+            <span className="paragraph_donate">
+              Act Locally, Think Globally
+            </span>
+            <span className="line"></span>
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -5,7 +5,6 @@ import "./notebook.scss";
 
 function NoteBook() {
   const navigation = useNavigate();
-  const [entries, setEntries] = useState(null);
 
   //sprawdzenie, czy użytkownik jest zalogowany
   //funkcja async jest odpowiedzialna za pobieranie danych z Supabase
@@ -28,6 +27,8 @@ function NoteBook() {
   }, []);
 
   //pobieranie wpisów z bazy danych Supabase, które są powiązane z zalogowanym użytkownikiem
+  const [entries, setEntries] = useState(null);
+
   const getEntries = async () => {
     let { data, error } = await supabase
       .from("Notebook")
