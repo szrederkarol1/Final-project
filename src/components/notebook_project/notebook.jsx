@@ -14,7 +14,7 @@ function NoteBook() {
   const getSession = async () => {
     const { data } = await supabase.auth.getSession();
     if (!data.session) {
-      navigation("/Projects/SignIn");
+      navigation("/Projects/NoteBook/SignIn");
       return;
     }
     setSession(data);
@@ -48,9 +48,9 @@ function NoteBook() {
   const handleLogout = async () => {
     let { error } = await supabase.auth.signOut();
     if (!error) {
-      navigation("/Projects/SignIn");
+      navigation("/Projects/NoteBook/SignIn");
     }
-    navigation("/Projects/SignIn");
+    navigation("/Projects/NoteBook/SignIn");
   };
 
   //zapisywanie nowej notatki w Supabase
@@ -83,8 +83,8 @@ function NoteBook() {
       <div className="notebook_header">Notebook</div>
       <div className="notebook_content">
         <form onSubmit={handleSaveNote}>
-          <textarea id="text" placeholder="Wpisz notatkę.."></textarea>
-          <button>Zapisz</button>
+          <textarea id="text" placeholder="Enter a note.."></textarea>
+          <button>Save</button>
         </form>
         {entries && (
           <ul>

@@ -38,7 +38,7 @@ const SignIn = () => {
               <h4 style={{ marginBottom: "1em" }}>Create an account</h4>
             </u>
             <Link
-              to="/Projects/SignUp"
+              to="/Projects/NoteBook/SignUp"
               style={{
                 textDecoration: "none",
                 color: "rgba(45, 89, 233)",

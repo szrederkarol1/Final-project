@@ -21,7 +21,7 @@ const SignUp = () => {
     });
 
     if (!error) {
-      navigation("/Projects/SignIn");
+      navigation("/Projects/NoteBook/SignIn");
       return;
     }
     console.error(error);
@@ -47,7 +47,7 @@ const SignUp = () => {
               <h4 style={{ marginBottom: "1em" }}>Do you have an account?</h4>
             </u>
             <Link
-              to="/Projects/SignIn"
+              to="/Projects/NoteBook/SignIn"
               style={{
                 textDecoration: "none",
                 color: "rgba(45, 89, 233)",

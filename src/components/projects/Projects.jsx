@@ -7,7 +7,7 @@ function Projects() {
       <div className="projects_content">
         <div className="register_content">
           <Link
-            to="/Projects/SignUp"
+            to="/Projects/NoteBook/SignUp"
             className="register"
             style={{
               textDecoration: "none",
