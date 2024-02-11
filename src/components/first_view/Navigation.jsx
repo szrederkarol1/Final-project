@@ -7,7 +7,7 @@ const Navigation = () => {
     <>
       <div className="top_bar">
         <div className="logo-container">
-          <h1 className="logo">About me</h1>
+          <h1 className="logo">Karol Szreder</h1>
         </div>
         <nav className="navigation">
           <li>
@@ -48,12 +48,15 @@ const Navigation = () => {
             I am a beginner front-end programmer, I am mainly interested in
             JavaScript. I know HTML and CSS well. I have also worked with an
             individual client, and finally I created a website for him about his
-            accounting office. See some of my other projects by clicking the button!
+            accounting office. See some of my other projects by clicking the
+            button!
           </span>
           <div className="btn-container">
-            <button type="submit" className="btn_first_page">
-              <Link className="link-projects" to="/Projects">PROJECTS</Link>
-            </button>
+            <Link className="link-projects" to="/Projects">
+              <button type="submit" className="btn_first_page">
+                PROJECTS
+              </button>
+            </Link>
           </div>
         </div>
       </div>

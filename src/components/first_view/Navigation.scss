@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 $primary-weight: 700;
 $secondary-weight: 500;
 $another-weight: 300;
@@ -23,15 +24,23 @@ $another-weight: 300;
     justify-content: space-between;
     padding: 0 125px;
     background-color: #221f1f;
+    position: fixed;
+    top: 0;
+    left: 0;
     .logo-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 10%;
-      background-color: #e50914;
+      width: 15%;
+      background: linear-gradient(
+        45deg,
+        rgba(204, 68, 68, 0.1) 10%,
+        rgba(4, 4, 4, 0.1) 100%
+      );
       .logo {
         color: #f5f5f1;
-        font-size: 24px;
+        font-size: 21px;
+        font-family: "Montserrat", sans-serif;
       }
     }
     .navigation {
@@ -39,21 +48,34 @@ $another-weight: 300;
       list-style-type: none;
       align-items: center;
       font-size: 20px;
+      width: 30vw;
+      height: 100%;
       li {
         height: 100%;
         width: 100%;
         @include flex;
         text-align: center;
-        margin: 2em;
+        position: relative;
+        &:hover {
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: rgba(204, 68, 68, 1);
+            animation: underlineAnimation 0.5s forwards;
+          }
+        }
       }
       a {
         @include flex;
+        width: 100%;
         height: 100%;
-        width: auto;
         color: #f5f5f1;
         text-decoration: none;
-        display: flex;
-        font-weight: $secondary-weight;
+        font-family: "Montserrat", sans-serif;
       }
     }
   }
@@ -61,12 +83,11 @@ $another-weight: 300;
 .header_container {
   background: linear-gradient(
     45deg,
-    rgba(204, 68, 68, 1) 15%,
+    rgba(204, 68, 68, 1) 10%,
     rgba(4, 4, 4, 1) 100%
   );
-  height: 80vh;
-  display: flex;
-  align-items: center;
+  height: 90vh;
+  @include flex;
   .welcome_site {
     width: 50%;
     display: flex;
@@ -74,32 +95,60 @@ $another-weight: 300;
     align-items: center;
     color: #f5f5f1;
     margin-left: 30px;
+    .welcome_title {
+      font-family: "Roboto", sans-serif;
+    }
     .btn-container {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
+      height: auto;
+      padding-top: 75px;
     }
     .above-arrow {
       text-align: center;
       margin-bottom: 10px;
+      font-family: "Roboto", sans-serif;
     }
     .about-me-describe {
       margin-top: 30px;
-      line-height: 1.3em;
+      line-height: 1.4em;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
     }
     .btn_first_page {
+      border-radius: 5px;
       border: 1px solid #221f1f;
-      box-shadow: 2px 2px #444444;
-      padding: 10px 25px;
-      font: normal bold 16px "Ubuntu", sans-serif;
-      margin-top: 2em;
       cursor: pointer;
-      position: relative;
       background-color: #221f1f;
-      a {
-        text-decoration: none;
-        color: #f5f5f1;
+      height: 60px;
+      width: 175px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #f5f5f1;
+      font-family: "Montserrat", sans-serif;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s, color 0.3s;
+      &:hover {
+        background-color: rgba(204, 68, 68, 0.1);
+        color: rgba(204, 68, 68, 1);
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 3px;
+          background-color: rgba(204, 68, 68, 1);
+          animation: underlineAnimation 0.5s forwards;
+        }
       }
     }
+  }
+}
+@keyframes underlineAnimation {
+  to {
+    width: 100%;
   }
 }
