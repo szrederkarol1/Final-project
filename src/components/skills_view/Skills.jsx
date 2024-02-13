@@ -11,7 +11,7 @@ function Skills() {
           <div className="first_skill">
             <div className="mały_div">
               <div className="icon_and_title_first_skill">
-                <span style={{ color: "yellow", fontWeight: "100" }}>
+                <span style={{ color: "#221F1F", fontWeight: "100" }}>
                   <i className="fa-solid fa-laptop-code fa-4x fa-flip"></i>
                 </span>
                 <h3 className="tittle_first_skill">
@@ -29,7 +29,6 @@ function Skills() {
           <div className="container_arguments">
             <h3
               style={{
-                color: "orange",
                 fontFamily: "cursive",
                 fontSize: "2em",
               }}
