@@ -101,16 +101,27 @@ $another-weight: 300;
     color: #f5f5f1;
     margin-left: 30px;
     .social-icons {
-      height: 125px;
+      height: 100px;
       width: 50px;
       position: fixed;
       top: 50%;
       transform: translateY(-50%);
       left: 7.55%;
-      border: 3px solid #f5f5f1;
+      border: 2px solid #f5f5f1;
       border-left: none;
+      border-radius: 0 5px 5px 0;
       .github-container {
-        border-bottom: 3px solid #f5f5f1;
+        border-bottom: 2px solid #f5f5f1;
+        transition: transform 0.5s ease-in-out;
+        &:hover {
+          transform: translateX(50px);
+        }
+      }
+      .linkedin-container {
+        transition: transform 0.5s ease-in-out;
+        &:hover {
+          transform: translateX(50px);
+        }
       }
     }
     .welcome_title {
