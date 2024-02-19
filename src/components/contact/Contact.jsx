@@ -15,7 +15,7 @@ const Contact = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginBottom: "7em",
+            marginBottom: "20px",
           }}
         >
           <i

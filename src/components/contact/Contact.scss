@@ -10,15 +10,16 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  @media screen and (max-width: 900px) {
-    height: auto;
-    justify-content: center;
-    align-items: center;
-  }
+  background: linear-gradient(
+    45deg,
+    rgba(204, 68, 68, 1) 10%,
+    rgba(4, 4, 4, 1) 100%
+  );
+  border-radius: 50px;
+
   .tittle_contact {
     display: flex;
     justify-content: center;
-    border-top: 3px solid red;
     font-family: Georgia, "Times New Roman", Times, serif;
     letter-spacing: 0.2em;
     .tittle_red {
@@ -31,23 +32,17 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    @media screen and (max-width: 900px) {
-      display: block;
-    }
     .data {
       height: 18em;
       width: 30em;
       background-color: rgb(128, 128, 128, 0.2);
       @include flex;
       flex-direction: column;
-      border-bottom: 3px solid red;
-      @media screen and (max-width: 1000px) {
-        margin: 2em;
-      }
       &:hover {
-        border-bottom: 3px solid yellow;
+        border-bottom: 3px solid red;;
         transition: all 500ms ease-in-out;
         transform: translateY(-15px);
+        filter: brightness(0.5);
       }
       .data_container {
         display: flex;
