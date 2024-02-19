@@ -5,10 +5,10 @@ import Projects from "./components//projects/Projects";
 import SignUp from "./components/projects/notebook_project/log_reg/SignUp";
 import SignIn from "./components/projects/notebook_project/log_reg/SignIn";
 import NoteBook from "./components/projects/notebook_project/notebook";
-import Home from "./components/give_items_project/src/components/Home/Home";
-import SignInItems from "./components/give_items_project/src/components/SignIn/SignInItems";
-import SignUpItems from "./components/give_items_project/src/components/SignUp/SignUpItems";
-import LogOutItems from "./components/give_items_project/src/components/LogOut/LogOut";
+import Home from "./components/projects/give_items_project/src/components/Home/Home";
+import SignInItems from "./components/projects/give_items_project/src/components/SignIn/SignInItems";
+import SignUpItems from "./components/projects/give_items_project/src/components/SignUp/SignUpItems";
+import LogOutItems from "./components/projects/give_items_project/src/components/LogOut/LogOut";
 
 const App = () => {
   return (
