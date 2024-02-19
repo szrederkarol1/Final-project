@@ -1,4 +1,4 @@
-import supabase from "../../../services/supabase";
+import supabase from "../../../../services/supabase.js";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import "./SignIn.scss";
