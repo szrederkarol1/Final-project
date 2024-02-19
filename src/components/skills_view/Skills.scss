@@ -20,7 +20,7 @@ $primary_margin: 1em;
   background: linear-gradient(
     45deg,
     rgba(204, 68, 68, 1) 10%,
-    rgb(104, 38, 38) 100%
+    rgba(4, 4, 4, 1) 100%
   );
   border-radius: 50px;
   height: auto;
@@ -82,7 +82,7 @@ $primary_margin: 1em;
       rgba(204, 68, 68, 0.9) 10%,
       rgba(4, 4, 4, 0.1) 100%
     );
-    border-radius: 10px;
+    border-radius: 100px 0;
 
     .container_arguments {
       @include flex;
@@ -92,11 +92,17 @@ $primary_margin: 1em;
       background-color: rgba(0, 0, 0, 0);
       h3 {
         color: #f5f5f1;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
       }
       .first_row_arguments {
         display: flex;
         .item_arguments {
           @include skill;
+          transition: filter 0.3s ease-in-out;
+          &:hover {
+            filter: brightness(0.3);
+          }
         }
       }
       .secondary_row_container {
@@ -104,6 +110,10 @@ $primary_margin: 1em;
         margin: auto;
         .item_arguments {
           @include skill;
+          transition: filter 0.3s ease-in-out;
+          &:hover {
+            filter: brightness(0.3);
+          }
         }
       }
     }
@@ -111,6 +121,10 @@ $primary_margin: 1em;
       display: flex;
       .item_arguments {
         @include skill;
+        transition: filter 0.3s ease-in-out;
+        &:hover {
+          filter: brightness(0.3);
+        }
       }
     }
   }
